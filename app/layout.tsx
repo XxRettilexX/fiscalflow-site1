@@ -30,6 +30,18 @@ export default function RootLayout({
   return (
     <html lang="it">
       <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-3M3T6YX1J7"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-3M3T6YX1J7');
+        `}
+      </Script>
+      <Script
         id="Cookiebot"
         src="https://consent.cookiebot.com/uc.js"
         data-cbid="0e2522e2-4564-44f8-99b1-21bfa10e03f7"
