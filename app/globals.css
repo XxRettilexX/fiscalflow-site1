@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* 🔹 Sfondo e superfici */
+  --fiscal-bg: #F4F7FC;
+  --fiscal-surface: #FFFFFF;
+
+  /* 🔵 Blu aziendali */
+  --fiscal-primary: #2563EB;
+  --fiscal-primary-light: #3B82F6;
+  /* Lighter shade for hover */
+  --fiscal-primary-dark: #1D4ED8;
+  /* Darker shade for text contrast (AA compliant on white) */
+  --fiscal-primary-text: #1E40AF;
+
+  /* 🟢 Accenti positivi */
+  --fiscal-accent: #0D9488;
+  --fiscal-accent-light: #50E3C2;
+  /* Lighter shade */
+
+  /* 🔴 Errori e avvisi */
+  --fiscal-danger: #E35757;
+  --fiscal-warning: #F59E0B;
+
+  /* ⚫ Testi e bordi */
+  --fiscal-text: #212121;
+  --fiscal-text-muted: #525252;
+  --fiscal-border: #E0E0E0;
+
+  /* Default overrides */
+  --background: var(--fiscal-bg);
+  --foreground: var(--fiscal-text);
+}
+
+/* Dark Mode Overrides */
+:root.dark {
+  /* 🔹 Sfondo e superfici - Dark */
+  --fiscal-bg: #121212;
+  --fiscal-surface: #1E1E1E;
+
+  /* 🔵 Blu aziendali - Adjusted for Dark */
+  --fiscal-primary: #3B82F6;
+  --fiscal-primary-light: #60A5FA;
+  --fiscal-primary-dark: #2563EB;
+  --fiscal-primary-text: #60A5FA;
+  /* Lighter for dark mode contrast */
+
+  /* ⚫ Testi e bordi - Inverted */
+  --fiscal-text: #E0E0E0;
+  --fiscal-text-muted: #757575;
+  --fiscal-border: #333333;
+}
+
+/* 👁️ Accessibility Modes */
+
+/* High Contrast Mode */
+:root.high-contrast {
+  --fiscal-bg: #000000 !important;
+  --fiscal-surface: #000000 !important;
+  --fiscal-primary: #FFFF00 !important;
+  /* Yellow on Black */
+  --fiscal-primary-light: #FFFF00 !important;
+  --fiscal-primary-dark: #FFFF00 !important;
+  --fiscal-accent: #00FFFF !important;
+  /* Cyan on Black */
+  --fiscal-text: #FFFFFF !important;
+  --fiscal-text-muted: #DDDDDD !important;
+  --fiscal-border: #FFFFFF !important;
+}
+
+:root.high-contrast.light {
+  --fiscal-bg: #FFFFFF !important;
+  --fiscal-surface: #FFFFFF !important;
+  --fiscal-primary: #000000 !important;
+  --fiscal-text: #000000 !important;
+  --fiscal-border: #000000 !important;
+}
+
+/* Dyslexic Friendly Font */
+:root.dyslexic-font {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Grayscale Mode */
+:root.grayscale-mode {
+  filter: grayscale(100%) !important;
+}
+
+@theme inline {
+  --color-fiscal-bg: var(--fiscal-bg);
+  --color-fiscal-surface: var(--fiscal-surface);
+  --color-fiscal-primary: var(--fiscal-primary);
+  --color-fiscal-primary-light: var(--fiscal-primary-light);
+  --color-fiscal-primary-dark: var(--fiscal-primary-dark);
+  --color-fiscal-accent: var(--fiscal-accent);
+  --color-fiscal-accent-light: var(--fiscal-accent-light);
+  --color-fiscal-danger: var(--fiscal-danger);
+  --color-fiscal-warning: var(--fiscal-warning);
+  --color-fiscal-text: var(--fiscal-text);
+  --color-fiscal-text-muted: var(--fiscal-text-muted);
+  --color-fiscal-border: var(--fiscal-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fiscal-bg);
+  color: var(--fiscal-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Utility to hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
